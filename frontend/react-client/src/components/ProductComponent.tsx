@@ -12,7 +12,7 @@ async function getProducts() {
 export function ProductComponent() {
   const { isError, isLoading, error, data } = useQuery("product", getProducts);
 
-  if (isError) return <>{error}</>;
+  if (isError) return <> Error - {String(error)}</>;
   if (isLoading) return <>Loading..</>;
   return (
     <div>
